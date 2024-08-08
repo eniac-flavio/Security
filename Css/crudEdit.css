@@ -1,0 +1,120 @@
+body {
+    margin: 100px 0 0 0;
+    overflow: hidden;
+}
+
+header {
+    background: transparent;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo a {
+    flex-wrap: nowrap;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    user-select: none;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background: var(--light-global-color);
+    color: var(--dark-global-color--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--light-global-color--secondary);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn ion-icon {
+    color: var(--dark-global-color--secondary);
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+.edit-title {
+    width: 100%;
+    background: var(--light-global-color);
+    color: var(--dark-global-color--secondary);
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    user-select: none;
+    cursor: default;
+}
+
+.edit-title output {
+    color: var(--dark-global-color--secondary);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    user-select: none;
+    cursor: default;
+}
+
+.edit-container {
+    padding: 15px 0;
+}
+
+.edit-container label {
+    width: 70px !important;
+    user-select: none;
+    cursor: default;
+}
+
+form>*:not(.edit-container) {
+    margin: 15px 0;
+    gap: 4px;
+}
+
+.edit-container input:not(input[type="submit"]),
+.no-data,
+select {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 6px;
+    width: calc(100% - 70px);
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    main {
+        padding-left: 10px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    main {
+        padding-left: 10px;
+    }
+}

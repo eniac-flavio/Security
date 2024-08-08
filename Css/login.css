@@ -1,0 +1,217 @@
+.body-container {
+    width: 100%;
+    height: 100%;
+}
+
+.body-content {
+    min-width: 450px;
+    min-height: 500px;
+    max-width: 1000px;
+    max-height: 700px;
+    width: 32%;
+    height: 75%;
+}
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-content {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    /* border-bottom: solid 5px var(--dark-global-color); */
+    background-color: var(--light-global-color);
+    background-image: url('../Img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container .logo {
+    width: 100%;
+    padding: 40px 50px;
+    border-radius: 10px 10px 0 0;
+    flex-wrap: wrap;
+}
+
+.form-mesage span {
+    color: var(--dark-global-color);
+}
+
+.form-container form {
+    width: 100%;
+    padding: 0 50px;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.label-container {
+    width: 100%;
+    position: relative;
+}
+
+.label-container label {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-left: 15px;
+    transform: translate(-50%, -50%);
+    color: #807F7C;
+    transition: all 0.1s ease-in-out;
+    user-select: none;
+    font-weight: 200;
+    cursor: text;
+}
+
+.label-container input:focus+label {
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in-out;
+    color: var(--light-global-color);
+    cursor: default;
+}
+
+.label-container input {
+    width: 100%;
+}
+
+.label-container input[type="email"],
+input[type="password"] {
+    border: solid 1px var(--border-color);
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: text;
+}
+
+.label-container input[type="email"]:focus,
+input[type="password"]:focus {
+    border: solid 1px var(--light-global-color--secondary);
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px 0;
+    background: var(--light-global-color--secondary);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background: var(--dark-global-color);
+    transition: 0.6s ease-in-out;
+}
+
+input[type="submit"]:focus {
+    background: var(--dark-global-color--secondary);
+    transition: 0.2s ease-in-out;
+}
+
+aside {
+    width: 100%;
+    text-align: start;
+    padding: 0 50px;
+}
+
+aside a {
+    color: var(--dark-global-color);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+aside a:hover {
+    color: var(--dark-global-color--secondary);
+    text-decoration: underline;
+    transition: 0.2s ease-in-out;
+}
+
+.blocked {
+    background: var(--border-color) !important;
+    color: var(--border-color) !important;
+
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .body-content {
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: 100vw;
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .form-content {
+        border-radius: 0;
+        border-bottom: 0px;
+        background-image: linear-gradient(135deg, var(--light-global-color), var(--light-global-color--secondary));
+    }
+
+    .form-container .logo {
+        padding: 100px 60px;
+        border-radius: 0;
+    }
+
+    .form-container form {
+        margin-top: -90px;
+        padding: 60px 40px 0 40px;
+        background: #fff;
+        border-radius: 52px;
+        gap: 42px;
+        z-index: 2;
+    }
+
+    .label-container label {
+        left: 55%;
+        padding-left: 15px;
+        color: #807F7C;
+    }
+
+    .label-container input:focus+label {
+        left: 55%;
+    }
+
+    .label-container input[type="email"],
+    input[type="password"] {
+        background: #e3e3e3;
+        border: 0;
+        border-radius: 52px;
+        padding: 25px 30px;
+    }
+
+    .label-container input[type="email"]:focus,
+    input[type="password"]:focus {
+        background: #e3e3e3;
+        border: 0;
+        border-radius: 52px;
+        padding: 25px 30px;
+    }
+
+    input[type="submit"] {
+        border-radius: 52px;
+        padding: 22.5px 0;
+        font-size: 1.3rem;
+    }
+
+    aside a {
+        margin-bottom: 50px;
+        display: block;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    /* Sem alterações */
+}

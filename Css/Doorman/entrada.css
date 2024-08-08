@@ -1,0 +1,251 @@
+* {
+    user-select: none;
+}
+
+body {
+    padding: 10px;
+    overflow-y: hidden;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    background: var(--light-global-color);
+    background-image: url('../../Img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-content {
+    padding: 30px 20px;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 130px);
+    gap: 10px;
+}
+
+.ion-notify,
+ion-icon {
+    display: inline-block;
+    position: relative;
+    transition: .3s;
+}
+
+.ion-notify ion-icon:hover,
+ion-icon:hover {
+    color: var(--dark-global-color);
+    transition: .2s;
+}
+
+.ion-notify:before {
+    content: '0';
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 500;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    background: var(--sucess-color);
+    position: absolute;
+    z-index: 2;
+}
+
+.list-container {
+    width: 60%;
+    height: 100%;
+    padding-right: 10px;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+}
+
+.list-content,
+.list-desc,
+.list-tag {
+    width: 100%;
+}
+
+.list-content {
+    padding: 20px;
+    transition: .4s;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.list-content:hover {
+    background: var(--border-color);
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* .list-content:active {
+    border: 1px solid var(--border-color);
+    transition: .3s;
+} */
+
+.list-desc {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.list-tag {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.list-tag span {
+    background: #e4f39075;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.list-tag span:nth-child(2) {
+    background: #9fd69775;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.list-tag span:nth-child(3) {
+    background: #bd59ec75;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.list-tag span:nth-child(4) {
+    background: #ec599675;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.list-tag span:nth-child(5) {
+    background: #5991ec75;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.message-container {
+    width: 40%;
+    min-width: 350px;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message-sent,
+.message-content {
+    width: 100%;
+}
+
+.message-sent {
+    padding: 10px;
+    gap: 15px;
+    border-bottom: 3px solid var(--border-color);
+}
+
+.message-profile img,
+.message-profile ion-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.message-profile img,
+.message-profile ion-icon:hover {
+    width: 40px;
+    height: 40px;
+    color: var(--font-color);
+}
+
+.message-info {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    text-align: start;
+}
+
+.message-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    user-select: text;
+    cursor: default;
+}
+
+.message-from {
+    font-size: .9rem;
+    font-weight: 300;
+    user-select: text;
+    cursor: default;
+}
+
+.message-content {
+    padding: 10px;
+    overflow: scroll;
+}
+
+.message-content p,
+b {
+    user-select: text;
+}
+
+.message-content p {
+    text-align: justify;
+    font-family: var(--font-serif--secondary);
+    text-indent: 20px;
+    line-height: 1.5rem;
+    letter-spacing: .25px;
+    font-size: 1.05rem;
+}
+
+.message-profile ion-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .message-container {
+        display: none;
+    }
+
+    .list-container,
+    .message-container {
+        width: 100%;
+    }
+
+    .message-profile ion-icon {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .message-container {
+        display: none;
+    }
+
+    .list-container,
+    .message-container {
+        width: 100%;
+    }
+
+    .message-profile ion-icon {
+        display: block;
+    }
+}

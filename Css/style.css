@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'AddingtonCF';
+    src: url('../Font/AddingtonCF-Regular.otf') format(opentype), url('../Font/AddingtonCF-Regular.ttf') format(truetype);
+    font-weight: normal;
+    font-style: normal;
+
+    /*
+        opentype (otf)
+        truetype (ttf)
+        embedded-opentype
+        truetype-aat (apple advanced typografy)
+        svg
+    */
+}
+
+:root {
+    --font-logo: 'Urbanist', Arial, Helvetica, Sans-Serif;
+    --font-sans: 'Rubik', Arial, Helvetica, Sans-Serif;
+    --font-serif: 'Bitter', 'Times New Roman', Times, Serif;
+    --font-serif--secondary: 'AddingtonCF', Arial, Helvetica, Sans-Serif;
+    --font-color: #393939;
+    --font-color-rgb: 57, 57, 57;
+
+    --light-global-color: #F1D3B5;
+    --light-global-color--secondary: #EEC8A3;
+    --dark-global-color: #815F4E;
+    --dark-global-color--secondary: #744E3B;
+
+    --border-color: rgba(var(--font-color-rgb), 0.20);
+
+    --error-color: #f80759;
+    --sucess-color: #2dc164;
+    --warning-color: #f0994b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--font-color);
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo,
+.logo a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    font-family: var(--font-logo);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form-content .logo {
+    justify-content: center;
+}
+
+.form-content .logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.form-content .logo h1 {
+    font-size: 1.5rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.error-container,
+.sucess-container,
+.warning-container {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 60%;
+    max-height: 80px;
+    overflow-y: hidden;
+    text-align: center;
+    box-shadow: 0px 5px 5px #0002;
+    animation: 8s alert;
+}
+
+.error-container span,
+.sucess-container span,
+.warning-container span {
+    color: #fffe;
+    font-weight: 500;
+}
+
+.error-container span b,
+.sucess-container span b,
+.warning-container span b {
+    font-weight: 600;
+}
+
+.error-container {
+    background: var(--error-color);
+}
+
+.sucess-container {
+    background: var(--sucess-color);
+}
+
+.warning-container {
+    background: var(--warning-color);
+}
+
+ion-icon {
+    font-size: 1.7rem;
+}
+
+@keyframes alert {
+    0% {
+        top: -20%;
+        left: 50%;
+    }
+
+    7% {
+        top: 6%;
+        left: 50%;
+    }
+
+    80% {
+        top: 6%;
+        left: 50%;
+    }
+
+    100% {
+        top: -20%;
+        left: 50%;
+    }
+}
+
+/* Display Flex */
+.flex {
+    display: flex;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.flexstart {
+    display: flex;
+    justify-content: start;
+}
+
+.flexend {
+    display: flex;
+    justify-content: end;
+}
+
+.flexbetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexaround {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexevenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Display Flex */
+
+/* Blurs */
+.blur5 {
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.blur10 {
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.blur15 {
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.blur20 {
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.blur25 {
+    background: transparent;
+    backdrop-filter: blur(25px);
+}
+
+.blur30 {
+    background: transparent;
+    backdrop-filter: blur(30px);
+}
+
+/* Blurs */
+
+/* display */
+.displaynone {
+    display: none;
+}
+
+.displayblock {
+    display: block;
+}
+
+.displayinlineblock {
+    display: inline-block;
+}
+
+/* display */
+
+/* Align */
+.aligncenter {
+    align-items: center;
+}
+
+.alignstar {
+    align-items: start;
+}
+
+.alignend {
+    align-items: end;
+}
+
+/* Align */
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    * {
+        font-size: 1.05rem;
+    }
+
+    .form-content .logo {
+        justify-content: start;
+    }
+
+    .form-content .logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .form-content .logo h1 {
+        font-size: 2.5rem;
+    }
+}

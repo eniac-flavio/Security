@@ -1,0 +1,539 @@
+body {
+    padding: 10px;
+    overflow-y: hidden;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header {
+    margin: 0 auto;
+    width: 100%;
+    background: var(--light-global-color);
+    background-image: url('../../Img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-content {
+    padding: 30px 20px;
+    width: 100%;
+}
+
+nav {
+    gap: 20px;
+}
+
+main {
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 130px);
+}
+
+.main-content {
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 92px);
+}
+
+.tabber-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: scroll;
+}
+
+.tabber-nav {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    max-width: 1400px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    user-select: none;
+}
+
+.tabber-nav button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-bottom: solid 5px transparent;
+    width: 30%;
+}
+
+.tabber-nav button:hover {
+    border-bottom: solid 5px var(--light-global-color);
+}
+
+.tabber-nav button.active {
+    border-bottom: solid 5px var(--dark-global-color);
+}
+
+.tabber-content {
+    margin-top: 5px;
+    max-width: 1400px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.tabber-inputs {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-top,
+.input-bottom {
+    width: 100%;
+}
+
+.input-radio {
+    gap: 40px;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+}
+
+label:hover {
+    color: var(--dark-global-color);
+    transition: .5s;
+}
+
+label.checked {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    transition: .3s;
+}
+
+label.checked:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 10px;
+    background: #f1d3b580;
+    z-index: -1;
+    animation: 0.7s midlight ease forwards;
+}
+
+form {
+    border: solid 1px var(--border-color);
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    user-select: none;
+}
+
+form input {
+    padding: 10px 20px;
+}
+
+form input[type="text"] {
+    width: 80%;
+}
+
+form input[type="text"]::placeholder {
+    color: var(--border-color);
+}
+
+form input[type="submit"] {
+    color: var(--font-color);
+    background: var(--light-global-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+form input[type="submit"]:focus {
+    background: var(--light-global-color--secondary);
+}
+
+form .safety {
+    color: rgba(var(--font-color-rgb), 0.33) !important;
+    background: var(--border-color) !important;
+}
+
+form .safety:focus {
+    background: rgba(var(--font-color-rgb), 0.33) !important;
+}
+
+.ion-notify,
+ion-icon {
+    display: inline-block;
+    position: relative;
+    transition: .3s;
+}
+
+.ion-notify ion-icon:hover,
+ion-icon:hover {
+    color: var(--dark-global-color);
+    transition: .2s;
+}
+
+.ion-notify:before {
+    content: '0';
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 500;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    top: -3px;
+    right: -3px;
+    border-radius: 50%;
+    background: var(--sucess-color);
+    position: absolute;
+    z-index: 2;
+}
+
+.tabber-line {
+    margin: 30px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tabber-line#line-fixed {
+    position: sticky;
+    top: -.5px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 0;
+    padding-right: 15px;
+    margin: 30px 10px 30px 0;
+}
+
+.tabber-line span:nth-child(1) {
+    grid-column: 1;
+    text-align: left;
+}
+
+.tabber-line span:nth-child(2) {
+    grid-column: 2;
+    text-align: left;
+}
+
+.tabber-line span:nth-child(3) {
+    grid-column: 3;
+    text-align: right;
+    padding-right: 15px;
+}
+
+@keyframes midlight {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 115%;
+    }
+}
+
+.onlycell {
+    display: none !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0;
+        gap: 0;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        background: transparent;
+        background-image: none;
+    }
+
+    .header-content {
+        justify-content: flex-start;
+        padding: 15px;
+        background: #D9D9D940;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav {
+        justify-content: space-around !important;
+        width: 100%;
+    }
+
+    .ion-notify:before {
+        content: '';
+        background: var(--light-global-color);
+        z-index: -1;
+    }
+
+    .main-content {
+        height: calc(100% - 92px);
+    }
+
+    .tabber-container {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 0;
+        border: none;
+        height: calc(100% - 66px);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .tabber-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .tabber-line {
+        margin: 40px 10px;
+    }
+
+    .tabber-nav button,
+    .tabber-nav button:hover,
+    .tabber-nav button.active {
+        border: none;
+    }
+
+    .tabber-inputs {
+        flex-direction: column-reverse;
+    }
+
+    .input-radio {
+        background: #D9D9D940;
+        border: none;
+        border-top: 2px solid #D9D9D940;
+        padding: 20px;
+        justify-content: space-evenly;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .input-radio label {
+        padding: 10px 40px;
+        background: transparent;
+        font-weight: 400;
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-radio label ion-icon {
+        color: rgba(var(--font-color-rgb), 0.33);
+    }
+
+    .input-radio label:hover {
+        background: rgba(var(--font-color-rgb), 0.05);
+        color: var(--font-color);
+        transition: .3s;
+    }
+
+    .input-radio .checked {
+        padding: 10px 40px;
+        background: var(--light-global-color);
+        font-weight: 500;
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-radio .checked ion-icon {
+        color: var(--dark-global-color--secondary);
+    }
+
+    .input-radio .checked:hover {
+        background: var(--light-global-color--secondary);
+        transition: .3s;
+    }
+
+    .input-radio label::before {
+        display: none;
+    }
+
+    .input-area form {
+        margin: 0 auto;
+        width: 85%;
+        justify-content: center;
+    }
+
+    .input-bottom {
+        z-index: 10;
+    }
+
+    .main-content {
+        padding: 0 10px;
+        position: relative;
+        top: 65px;
+        left: 0;
+    }
+
+    .onlycell {
+        display: block !important;
+    }
+
+    .onlypc {
+        display: none !important;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        padding: 0;
+        gap: 0;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        background: transparent;
+        background-image: none;
+        background: var(--light-global-color);
+        background-image: url('../../Img/bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header-content {
+        justify-content: flex-start;
+        padding: 40px;
+        gap: 50px;
+    }
+
+    .logo-container {
+        display: flex;
+        width: 100%;
+    }
+
+    nav {
+        gap: 50px;
+        width: 100%;
+    }
+
+    .ion-notify:before {
+        content: '';
+        background: var(--light-global-color);
+        z-index: -1;
+    }
+
+    .tabber-container {
+        position: absolute;
+        top: 155px;
+        left: 0;
+        padding: 0;
+        border: none;
+        height: calc(100% - 140px);
+        width: 100%;
+    }
+
+    .tabber-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .tabber-inputs {
+        flex-direction: column-reverse;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .input-radio {
+        background: #D9D9D940;
+        border: none;
+        border-top: 2px solid #D9D9D940;
+        padding: 20px;
+        justify-content: space-evenly;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .input-radio label {
+        padding: 10px 40px;
+        background: transparent;
+        font-weight: 400;
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-radio label ion-icon {
+        color: rgba(var(--font-color-rgb), 0.33);
+    }
+
+    .input-radio label:hover {
+        background: rgba(var(--font-color-rgb), 0.05);
+        color: var(--font-color);
+        transition: .3s;
+    }
+
+    .input-radio .checked {
+        padding: 10px 40px;
+        background: var(--light-global-color);
+        font-weight: 500;
+        border-radius: 30px;
+        transition: .5s;
+    }
+
+    .input-radio .checked ion-icon {
+        color: var(--dark-global-color--secondary);
+    }
+
+    .input-radio .checked:hover {
+        background: var(--light-global-color--secondary);
+        transition: .3s;
+    }
+
+    .input-radio label::before {
+        display: none;
+    }
+
+    .input-area form {
+        margin: 0 auto;
+        width: 85%;
+        justify-content: center;
+    }
+
+    .main-content {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        padding: 0 10px;
+        height: calc(100% - 92px);
+    }
+
+    .onlycell {
+        display: block !important;
+    }
+
+    .onlypc {
+        display: none !important;
+    }
+}

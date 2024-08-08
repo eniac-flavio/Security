@@ -1,0 +1,306 @@
+body {
+    overflow: hidden;
+}
+
+header {
+    background: transparent;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo a {
+    flex-wrap: nowrap;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+header form {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 4px;
+    width: calc(100% - 200px);
+    gap: 4px;
+}
+
+header form input[type="text"] {
+    width: 100%;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.btn {
+    display: inline-flex;
+    user-select: none;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background: var(--light-global-color);
+    color: var(--dark-global-color--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--light-global-color--secondary);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn ion-icon {
+    color: var(--dark-global-color--secondary);
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table form {
+    display: inline;
+}
+
+tr {
+    border-top: 1px solid var(--border-color);
+}
+
+tr:first-child {
+    background: var(--light-global-color);
+    user-select: none;
+    border-top: none;
+}
+
+tr:first-child th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+tr:first-child th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+tr td:last-child {
+    user-select: none;
+    cursor: default;
+}
+
+tr th:nth-child(3) {
+    width: 329px;
+}
+
+th {
+    color: var(--dark-global-color--secondary);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+td {
+    text-indent: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0 15px 10px;
+}
+
+.cpf,
+.cnpj,
+.add-id,
+.add-email,
+.add-cnpj {
+    font-size: .8rem;
+    color: rgba(var(--font-color-rgb), .8);
+    user-select: none;
+    cursor: default;
+}
+
+.add-id {
+    margin-right: 10px;
+    user-select: text;
+    cursor: text;
+}
+
+.add-email {
+    user-select: text;
+    cursor: text;
+}
+
+.add-cnpj {
+    margin-left: 10px;
+    user-select: text;
+    cursor: text;
+}
+
+.details {
+    display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    header {
+        display: block !important;
+        width: 100% !important;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin: 20px 0 0 20px;
+    }
+
+    form {
+        border: none !important;
+        flex-wrap: wrap;
+        width: 100% !important;
+        gap: 15px !important;
+    }
+
+    main {
+        margin-top: 10px;
+        height: 100%;
+        border-top: 1px solid var(--border-color);
+        padding: 10px 20px;
+        overflow: visible;
+    }
+
+    input {
+        padding: 20px 30px !important;
+        margin: 10px 0;
+        background: rgba(var(--font-color-rgb), .1);
+        border-radius: 54px;
+        width: 100%;
+    }
+
+    header button,
+    a {
+        width: 100%;
+        padding: 10px 0 !important;
+    }
+
+    table {
+        overflow-y: scroll;
+    }
+
+    table tr th:nth-child(2),
+    table tr td:nth-child(2) {
+        display: none;
+    }
+
+    table tr th:last-child,
+    table tr td:last-child {
+        width: 200px !important;
+    }
+
+    table tr td:last-child span {
+        display: none;
+    }
+
+    table tr td:last-child form,
+    table tr td:last-child .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    table tr td:last-child .btn {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    header {
+        display: block !important;
+        width: 100% !important;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin: 20px 0 0 20px;
+    }
+
+    form {
+        border: none !important;
+        flex-wrap: wrap;
+        width: 100% !important;
+        gap: 15px !important;
+    }
+
+    main {
+        margin-top: 10px;
+        height: 100%;
+        border-top: 1px solid var(--border-color);
+        padding: 10px 20px;
+        overflow: visible;
+    }
+
+    input {
+        padding: 20px 30px !important;
+        margin: 10px 0;
+        background: rgba(var(--font-color-rgb), .1);
+        border-radius: 54px;
+        width: 100%;
+    }
+
+    header button,
+    a {
+        width: 100%;
+        padding: 10px 0 !important;
+    }
+
+    table {
+        overflow-y: scroll;
+    }
+
+    table tr th:last-child,
+    table tr td:last-child {
+        width: 200px !important;
+    }
+
+    table tr td:last-child span {
+        display: none;
+    }
+
+    table tr td:last-child form,
+    table tr td:last-child .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    table tr td:last-child .btn {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    body {
+        overflow-y: scroll;
+    }
+}
