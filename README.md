@@ -1,14 +1,32 @@
-> **AVISO:** O projeto utiliza linguagem PHP que não é suportada no serviço Github Pages.
+<div align="center">
+    <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eniac-flavio/Security/932a92791206e0b213374783021541f0aa4a096f/Img/logoDark.svg">
+        <img src="https://raw.githubusercontent.com/eniac-flavio/Security/932a92791206e0b213374783021541f0aa4a096f/Img/logoLight.svg" height="125">
+    </picture>
+    <h1>Security FM</h1>
+</div>
 
-# Sobre
-O projeto Security é um desafio desenvolvido por um grupo de estudantes do 2º ano do ensino médio do técnico em Informática do colégio Eniac. O objetivo passado pelo professor é: Utilizar PHP e banco de dados para solucionar o problema de uma empresa de portaria empresarial sobre gestão de entrada e saída.
-Particularmente sobre o nosso projeto, o objetivo é solucionado através de um sistema de tipos de acesso, onde o porteiro pode realizar suas funções como adicionar pessoa ou veículo a lista de entrada ou saída; do histórico de entrada e saída; e pelo painel de menssagens e avisos. Além disso, outro tipo de perfil é o da equipe de administração que pode gerenciar funcionários, visitantes e veículos, além da permissão para escrever avisos. Por fim, o acesso de empresa possui permissão para enviar mensagens também.
+<div align="center">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+    <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
+</div>
 
-## Integrantes
+## Introdução
+
+Criado por um grupo de estudantes do ensino médio integrado do Eniac, o sistema SecurityFM permite o gerenciamento de fluxo para uma portaria de um grupo empresarial através de divisão de tarefas entre porteiros, administradores e empresas.
+
+- Veja a nossa documentação do projeto.
+
+## Contribuições
+
+Caso deseje fazer alguma contribuição, siga os [padrões de commit](https://github.com/iuricode/padroes-de-commits) de autoria de [@iuricode](https://github.com/iuricode).
+
+### Contribuidores
+
 - **Flávio Henrique:** Responsável pelo FronEnd
 - **Matheus Teixeira:** Responsável pelo BackEnd
 - **Kayky Alves:** Responsável pelos entregáveis
 - **Kevin Simões:** Responsável pelo SQL
-
-### Entrega
-Desenvolvido para entrega no final do 1º semestre de 2024.
