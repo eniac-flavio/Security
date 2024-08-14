@@ -18,7 +18,7 @@
 
 Criado por um grupo de estudantes do ensino médio integrado do Eniac, o sistema SecurityFM permite o gerenciamento de fluxo para uma portaria de um grupo empresarial através de divisão de tarefas entre porteiros, administradores e empresas.
 
-- Veja a nossa documentação do projeto.
+- Veja a nossa [documentação do projeto](https://github.com/eniac-flavio/Security/blob/main/docs/structure.md).
 
 ## Contribuições
 
